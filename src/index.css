@@ -20,3 +20,18 @@ p {
 	font-size: 14px;
 	color: #333333;
 }
+
+.btn{
+	padding: 0.5rem 2rem;
+	background-color: #0f1923;
+	border: 1.5px solid #0f1923;
+	color: #f9f9f9;
+	letter-spacing: 1px;
+	font-family: "Koulen", cursive;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.btn:hover{
+	border-color: #f9f9f9;
+}

@@ -12,8 +12,7 @@
 }
 
 .card h2 {
-	font-family: "Koulen", cursive;
-
+    font-family: "Koulen", cursive;
 	font-weight: 400;
 	font-size: 1.2rem;
 	letter-spacing: 1px;
@@ -40,4 +39,10 @@
 
 .card:hover p {
 	color: #ffeef2;
+}
+
+@media screen and (max-width: 800px) {
+	.card {
+		width: 90%;
+	}
 }

@@ -7,9 +7,20 @@
 	justify-content: space-evenly;
 	align-items: center;
 	color: #ff4654;
+	z-index: 999;
+	transition: all 0.3s ease-in;
+}
+
+.elevate{
+	background-color: #0f1923;
+	box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	opacity: 0.9;
 }
 
 .logo h1 {
+	margin: 0;
 	font-family: "Koulen", cursive;
 	font-style: italic;
 	letter-spacing: 1.5px;

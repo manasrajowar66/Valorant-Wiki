@@ -30,9 +30,19 @@
 }
 
 .features {
-	width: 60%;
+	width: 80%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+}
+
+@media screen and (max-width: 800px) {
+	.features {
+		    width: 100%;
+			flex-direction: column;
+	}
+	.container{
+		padding: 2rem 3rem;
+	}
 }
