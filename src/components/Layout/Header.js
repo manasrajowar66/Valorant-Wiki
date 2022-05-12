@@ -1,5 +1,6 @@
 import classes from "./Header.module.css";
 import { useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [isElevateHeader, setElevateHeader] = useState(false);
@@ -24,13 +25,25 @@ const Header = () => {
       className={`${classes.header} ${isElevateHeader && classes.elevate}`}
     >
       <div className={classes.logo}>
-        <h1>VALORANT - WIKI</h1>
+        <Link to="/">VALORANT - WIKI</Link>
       </div>
       <div className={classes.links}>
         <ul>
-          <li>Agents</li>
-          <li>Guns</li>
-          <li>Maps</li>
+          <li>
+            <NavLink activeClassName={classes.active} exact to="/agents">
+              Agents
+            </NavLink>
+          </li>
+          <li>
+            <NavLink activeClassName={classes.active} exact to="/weapons">
+              Weapons
+            </NavLink>
+          </li>
+          <li>
+            <NavLink activeClassName={classes.active} to="/maps">
+              Maps
+            </NavLink>
+          </li>
         </ul>
       </div>
     </header>

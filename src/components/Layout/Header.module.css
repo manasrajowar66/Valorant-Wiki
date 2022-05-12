@@ -12,14 +12,14 @@
 }
 
 .elevate{
-	background-color: #0f1923;
+	background-color: #f9f9f9;
 	box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
 	-webkit-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
-	opacity: 0.9;
+	opacity: 0.7;
 }
 
-.logo h1 {
+.logo a {
 	margin: 0;
 	font-family: "Koulen", cursive;
 	font-style: italic;
@@ -34,7 +34,9 @@
 	align-items: center;
 }
 
-.links li {
+.links li,a {
+	text-decoration: none;
+	color: #ff4654;
 	font-family: "Poppins", sans-serif;
 	margin-right: 2.5rem;
 	font-size: 1rem;
@@ -42,15 +44,22 @@
 	letter-spacing: 1px;
 }
 
+.links a:active,
+.links a.active{
+	color: #0f1923;
+}
+
+.links a:last-child,
 .links li:last-child {
 	margin-right: 0;
 }
 
 @media screen and (max-width: 700px) {
-	.logo h1 {
+	.logo a {
 		font-size: 2rem;
 		font-weight: 400;
 	}
+	.links a,
 	.links li {
 		margin-right: 1.5rem;
 		font-size: 0.8rem;
@@ -58,10 +67,11 @@
 }
 
 @media screen and (max-width: 450px) {
-	.logo h1 {
+	.logo a {
 		font-size: 1.5rem;
 		font-weight: 400;
 	}
+	.links a,
 	.links li {
 		margin-right: 1.5rem;
 		font-size: 0.7rem;
