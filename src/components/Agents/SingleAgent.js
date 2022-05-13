@@ -2,6 +2,8 @@ import classes from "./SingleAgent.module.css";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import agentBackground from "../../assets/agent-background.mp4";
+import AgentAbilities from "./AgentAbilities";
+import alternateBG from "../../assets/valorant-blank-bg2.jpg";
 
 const SingleAgent = () => {
   const { agentUuid } = useParams();
@@ -24,6 +26,10 @@ const SingleAgent = () => {
           <source src={agentBackground} type="video/mp4" />
         </video>
       </div>
+      <div
+        className={classes["alternate-background"]}
+        style={{ backgroundImage: `url(${alternateBG})` }}
+      ></div>
       <div className={classes["agent-details"]}>
         <div
           className={classes.images}
@@ -56,6 +62,7 @@ const SingleAgent = () => {
           <div className={classes.underline}></div>
         </div>
       </div>
+      {agentDetails && <AgentAbilities abilities={agentDetails.abilities} />}
     </div>
   );
 };
