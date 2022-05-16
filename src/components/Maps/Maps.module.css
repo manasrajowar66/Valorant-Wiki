@@ -1,0 +1,124 @@
+.container {
+	background-color: #f0d1d4fd;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 6rem 6rem 2rem;
+}
+
+.title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.title div {
+	width: 70%;
+	height: 4px;
+	background-color: #1c252e;
+}
+
+.title h1 {
+	margin: 0;
+	font-family: "Koulen", cursive;
+	font-weight: 400;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	color: black;
+}
+
+.maps-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	background-color: #1c252e;
+	padding: 2rem;
+	box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.map {
+	width: 23%;
+	height: 15rem;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 0.3s ease-in-out;
+	/* padding: 1rem; */
+	margin: 0.4rem;
+	word-wrap: break-word;
+}
+
+.map:hover {
+	/* background-color: #ff4654;
+	background-blend-mode: soft-light; */
+	transform: translateY(-5%);
+	box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.map h1 {
+	font-family: "Koulen", cursive;
+	font-weight: 400;
+	font-size: 1.7rem;
+	color: #f9f9f9;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+}
+
+.map:hover h1 {
+	color: #ff4654;
+	word-wrap: break-word;
+}
+
+@media screen and (max-width: 1570px) {
+	.map {
+		width: 30%;
+	}
+}
+
+@media screen and (max-width: 1250px) {
+	.map h1 {
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 1150px) {
+	.map {
+		width: 45%;
+	}
+	.container {
+		padding: 6rem 2rem 2rem;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.map {
+		width: 90%;
+		margin: 0.4rem 0;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.map {
+		margin: 0.4rem 0;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.container {
+		padding: 6rem 0rem 2rem;
+	}
+	.map {
+		width: 98%;
+		margin: 0.4rem 0;
+	}
+}
