@@ -11,7 +11,9 @@ const Footer = () => {
                 <p>Riot Games, Valorant, and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
             </div>
             <div>
-                <img className={classes.icon} src={github} alt="" />
+                <a href="https://github.com/manasrajowar66/Valorant-Wiki" target="_black">
+                    <img className={classes.icon} src={github} alt="" />
+                </a>
             </div>
         </footer>
     )

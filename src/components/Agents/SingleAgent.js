@@ -49,14 +49,14 @@ const SingleAgent = () => {
         </div>
         <div className={classes.details}>
           <div className={classes.role}>
-            <h5>// Role</h5>
+            <h5>{"//"} Role</h5>
             <h1>
               {agentDetails && agentDetails.role.displayName}
-              <img src={agentDetails && agentDetails.role.displayIcon} />
+              <img src={agentDetails && agentDetails.role.displayIcon} alt="" />
             </h1>
           </div>
           <div className={classes.description}>
-            <h5>// Biography</h5>
+            <h5>{"//"} Biography</h5>
             <p>{agentDetails && agentDetails.description}</p>
           </div>
           <div className={classes.underline}></div>

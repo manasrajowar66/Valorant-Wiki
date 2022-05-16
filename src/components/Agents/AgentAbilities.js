@@ -1,6 +1,5 @@
 import { useState } from "react";
 import classes from "./AgentAbilities.module.css";
-import { CSSTransition } from "react-transition-group";
 
 const AgentAbilities = (props) => {
   const [activeAbility, setActiveAbility] = useState(0);
@@ -30,6 +29,7 @@ const AgentAbilities = (props) => {
               </div>
             );
           }
+          return <></>;
         })}
       </div>
 

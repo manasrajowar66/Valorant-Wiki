@@ -1,0 +1,158 @@
+.weapons-container {
+	background-color: #f0d1d4fd;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 6rem 6rem 2rem;
+}
+
+.title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.title div {
+	width: 70%;
+	height: 4px;
+	background-color: #1c252e;
+}
+
+.title h1 {
+	margin: 0;
+	font-family: "Koulen", cursive;
+	font-weight: 400;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	color: black;
+}
+
+.weapons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+	width: 80%;
+	background-color: #0f1923;
+	padding: 2rem;
+	box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+/* /////////////// */
+.weapon-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 2rem;
+	transition: all 0.3s ease-in-out;
+}
+
+.card-details {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.3s ease-in-out;
+	padding: 1rem 0;
+}
+.card-details button {
+	opacity: 0;
+}
+
+.card-details img {
+	max-width: 15rem;
+	height: 4rem;
+}
+
+.card-details h4 {
+	margin: 0;
+	position: relative;
+	top: 0%;
+	left: 0%;
+	transform: rotate(-90deg);
+	font-family: "Koulen", cursive;
+	font-size: 1.2rem;
+	font-weight: bolder;
+	letter-spacing: 5px;
+	color: #ff4654;
+}
+
+.weapon-card:hover {
+	box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	background-color: #ff4653;
+	transform: translateY(-5%);
+}
+
+.weapon-card:hover .card-details h4 {
+	color: #f9f9f9;
+	left: 10%;
+	animation: slide-down 0.3s ease-in-out forwards;
+}
+
+.weapon-card:hover .card-details button {
+	opacity: 1;
+}
+
+/* .weapon-card:hover .card-details img {
+    position: relative;
+    transform: translateY(-25%);
+} */
+
+@keyframes slide-down {
+	0% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+	20% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+	/* 50%{
+        opacity: 1;
+        transform: translateY(20%);
+    } */
+	100% {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+@media screen and (max-width: 622px) {
+	.weapon-card {
+		padding: 1rem 0;
+		width: 100%;
+	}
+}
+
+/* /////////// */
+@media screen and (max-width: 1150px) {
+	.weapons {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 961px) {
+	.weapons {
+		padding: 1rem 1rem;
+	}
+	.weapons-container {
+		padding: 6rem 3rem 2rem;
+	}
+}
+
+@media screen and (max-width: 622px) {
+	.weapons {
+		flex-direction: column;
+		padding: 1rem;
+	}
+	.weapons-container {
+		padding: 6rem 1rem 2rem 1rem;
+	}
+}

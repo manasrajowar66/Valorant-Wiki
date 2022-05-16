@@ -1,0 +1,264 @@
+.weapon-container {
+	/* background-position: center;
+	background-size: cover;
+	background-attachment: fixed; */
+	width: 100vw;
+	background-color: #f0d1d4fd;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.weapon-details {
+	width: 100%;
+	height: 70vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("../../assets/valo-bg-4.webp");
+	background-color: #0f1923;
+	background-blend-mode: multiply;
+	position: relative;
+}
+
+.weapon-details img {
+	width: 30%;
+	height: 35%;
+	animation: zoom 1s ease-in-out alternate infinite;
+}
+.weapon-details h1 {
+	font-family: "Koulen", cursive;
+	color: #ff4654;
+	font-size: 2.5rem;
+	font-weight: 400;
+	position: absolute;
+	left: 20%;
+	bottom: 0%;
+}
+
+.weapon-container .dropdown-container {
+	position: absolute;
+	right: 10%;
+	bottom: 2%;
+}
+
+.weapon-container .dropdown-container p {
+	font-family: "Koulen", cursive;
+	color: #ff4654;
+	letter-spacing: 4;
+	font-size: 1.1rem;
+	margin: 0;
+}
+
+.dropdown-container select {
+	/* margin-right: 20rem; */
+	padding: 0.8rem 1.2rem;
+	font-family: "Koulen", cursive;
+	color: #1c252e;
+	letter-spacing: 2;
+	font-size: 1.1rem;
+	border: 1px solid transparent;
+	border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+	/* position: relative;
+	right: 15%; */
+}
+
+.variants-container {
+	/* position: relative; */
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem 0;
+	margin-bottom: 3rem;
+}
+
+.variants-container h2 {
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-size: 1.1rem;
+	letter-spacing: 2px;
+	color: black;
+}
+
+.title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.title div {
+	width: 70%;
+	height: 4px;
+	background-color: #1c252e;
+}
+
+.title h1 {
+	margin: 0;
+	font-family: "Koulen", cursive;
+	font-weight: 400;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	color: black;
+}
+
+.variants {
+	margin-top: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.active-variant {
+	box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	transform: translateY(-5%);
+}
+
+.variants div {
+	margin-right: 1rem;
+	width: 4rem;
+	height: 4rem;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.variants div:last-child {
+	margin-right: 0;
+}
+
+.variants div:hover {
+	box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+	transform: translateY(-5%);
+}
+
+.variants img {
+	width: 100%;
+	height: 100%;
+}
+
+.selected-variant {
+	width: 80%;
+	min-height: 20rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 3rem;
+	background-color: #0f1923;
+	padding: 2rem 2rem;
+}
+
+.selected-variant h1 {
+	font-family: "Koulen", cursive;
+	font-size: 2rem;
+	font-weight: 300;
+	color: #f9f9f9;
+	text-align: center;
+	/* animation: zoom 0.3s ease-in-out forwards; */
+}
+
+.selected-variant img {
+	width: 35rem;
+	/* animation: zoom 0.3s ease-in-out forwards; */
+}
+
+.zoom {
+	animation: single-zoom 0.5s ease-in-out forwards;
+}
+
+@keyframes zoom {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1.1);
+	}
+}
+
+@keyframes single-zoom {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	.weapon-details h1 {
+		font-size: 1.5rem;
+		left: 5%;
+	}
+	.weapon-container .dropdown-container {
+		right: 5%;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.weapon-details img {
+		width: 25%;
+		height: 35%;
+	}
+	.weapon-details h1 {
+		font-size: 1rem;
+	}
+	.weapon-container .dropdown-container select {
+		padding: 0.5rem 1rem;
+		letter-spacing: 2;
+		font-size: 1rem;
+	}
+	.weapon-container .dropdown-container p {
+		letter-spacing: 1;
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 780px) {
+	.weapon-details {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.weapon-details h1 {
+		font-size: 1rem;
+		position: static;
+		margin-bottom: 2rem;
+	}
+	.weapon-details img {
+		margin-bottom: 1rem;
+		width: 20rem;
+		height: 10rem;
+	}
+	.weapon-container .dropdown-container {
+		position: static;
+		width: 80%;
+	}
+	.weapon-container .dropdown-container select {
+		padding: 0.2rem 0.5rem;
+		letter-spacing: 2;
+		font-size: 1rem;
+		width: 100%;
+	}
+	.weapon-container .dropdown-container p {
+		letter-spacing: 1;
+		font-size: 1rem;
+	}
+	.selected-variant img {
+		width: 20rem;
+	}
+	.selected-variant h1 {
+		font-size: 1rem;
+		font-weight: 300;
+		/* animation: zoom 0.3s ease-in-out forwards; */
+	}
+}

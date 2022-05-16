@@ -5,7 +5,9 @@
 	justify-content: space-around;
 	align-items: center;
 	padding: 1rem;
+	/* position: absolute;
 	bottom: 0%;
+	left: 0%; */
 }
 
 .footer p {
@@ -20,10 +22,10 @@
 }
 
 @media screen and (max-width: 1000px) {
-	.footer p{
+	.footer p {
 		font-size: 0.8rem;
 	}
-	.footer{
+	.footer {
 		text-align: center;
 		flex-direction: column;
 		justify-content: center;
