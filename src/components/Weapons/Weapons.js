@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import classes from './Weapons.module.css';
+import React, { useEffect, useState } from "react";
+import classes from "./Weapons.module.css";
 import { useHistory } from "react-router-dom";
 
 const Weapons = () => {
@@ -14,35 +14,40 @@ const Weapons = () => {
       setWeaponsDetails(data.data);
     };
     fetchData();
+    return () => {};
   }, []);
 
   const onClickHandler = (uuid) => {
     history.push(`/weapons/${uuid}`);
-  }
+  };
 
   return (
-    <div className={classes['weapons-container']}>
+    <div className={classes["weapons-container"]}>
       <div className={classes.title}>
         <h1>Weapons</h1>
         <div></div>
       </div>
       <div className={classes.weapons}>
-        {weaponsDetails && weaponsDetails.map((weapon) => {
-          return (
-            <div className={classes["weapon-card"]} key={weapon.uuid}>
-              <div className={classes["card-details"]}>
-                <h4>{weapon.displayName}</h4>
-                <img src={weapon.displayIcon} alt="" />
+        {weaponsDetails &&
+          weaponsDetails.map((weapon) => {
+            return (
+              <div className={classes["weapon-card"]} key={weapon.uuid}>
+                <div className={classes["card-details"]}>
+                  <h4>{weapon.displayName}</h4>
+                  <img src={weapon.displayIcon} alt="" />
+                </div>
+                <button
+                  className={`btn`}
+                  onClick={() => onClickHandler(weapon.uuid)}
+                >
+                  Know More
+                </button>
               </div>
-              <button className={`btn`} onClick={() => onClickHandler(weapon.uuid)}>
-                Know More
-              </button>
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
     </div>
-  )
+  );
 };
 
 export default Weapons;

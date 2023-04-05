@@ -1,5 +1,6 @@
 import classes from "./Card.module.css";
 import { useHistory } from "react-router-dom";
+import React from "react";
 
 const Card = (props) => {
   const history = useHistory();

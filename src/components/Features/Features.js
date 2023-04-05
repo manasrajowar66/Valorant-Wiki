@@ -1,3 +1,4 @@
+import React from "react";
 import classes from "./Features.module.css";
 import { data } from "./features-data";
 import Card from "./Card";

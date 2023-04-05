@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import classes from "./Agents.module.css";
 import AgentCard from "./AgentCard";
@@ -12,6 +13,7 @@ const Agents = () => {
       setAgents(() => data.data.filter((d) => d.isPlayableCharacter));
     };
     fetchAgents();
+    return () => {};
   }, []);
 
   console.log(agents);

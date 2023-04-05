@@ -1,4 +1,5 @@
 import SingleAgent from '../components/Agents/SingleAgent';
+import React from "react";
 
 const SingleAgentPage = () => {
     return <SingleAgent />
