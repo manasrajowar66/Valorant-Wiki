@@ -51,11 +51,12 @@
 	align-items: center;
 	padding: 1rem 2rem;
 	transition: all 0.3s ease-in-out;
+	width: 25%;
 }
 
 .card-details {
-	position: relative;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	transition: all 0.3s ease-in-out;
@@ -72,15 +73,12 @@
 
 .card-details h4 {
 	margin: 0;
-	position: relative;
-	top: 0%;
-	left: 0%;
-	transform: rotate(-90deg);
 	font-family: "Koulen", cursive;
 	font-size: 1.2rem;
 	font-weight: bolder;
 	letter-spacing: 5px;
 	color: #ff4654;
+	margin-bottom: 0.5rem;
 }
 
 .weapon-card:hover {

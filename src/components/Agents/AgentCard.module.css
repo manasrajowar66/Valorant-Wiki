@@ -5,6 +5,7 @@
     align-items: center;
     padding: 1rem 2rem;
     transition: all 0.3s ease-in-out;
+    width: 25%;
 }
 
 .card-details{
@@ -19,8 +20,8 @@
 }
 
 .card-details img{
-    width: 7rem;
-    height: 7rem;
+    width: 12rem;
+        height: 12rem;
 }
 
 .card-details h4 {
