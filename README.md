@@ -1,1 +1,1 @@
-//https://valopedia.netlify.app/
+https://valo-pedia.netlify.app/
