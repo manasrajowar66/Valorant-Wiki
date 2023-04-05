@@ -1,3 +1,4 @@
+import React from "react";
 import classes from "./SingleAgent.module.css";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -18,6 +19,7 @@ const SingleAgent = () => {
       setAgentDetails(data.data);
     };
     fetchData();
+    return () => {};
   }, [agentUuid]);
   return (
     <div className={classes["agent-container"]}>
